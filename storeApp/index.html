@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputer Store App</title>
+    <link rel="stylesheet" href="css/storeApp.css">
+</head>
+<body>
+    <h2 class="title">Customer Store App</h2>
+    <div class="container">
+        <div class="left">
+            <h4 class="banker_div_title">Joe Banker</h4>
+            <div>
+                <h5 class="banker_div_balance inLine">Balance</h5>
+                <span class="inLine" id="balance">0</span>
+            </div>
+            <div>
+                <h5 id="loanTitle" class="loanTitle inLine">Outstanding Loan</h5>
+                <span id="loan" class="inLine"></span>
+            </div>
+            <input class="hide" type="text" id="loanInput" value=""/>
+            <button id="getALoan" class="button_loan" >Get a loan</button>
+        </div>
+        <div class="middle">
+            <h4 class="banker_div_title">Work</h4>
+            <div>
+                <h5 class="banker_div_balance inLine">Pay</h5>
+                <span class="inLine" id="pay">0</span>
+            </div>
+            <button id="work" class="button_work">Work</button>
+            <button id="bank" class="button_bank">Bank</button>
+            <div id="repayButtonDisplay" class="hide">
+                <button id="repay" class="buttonRepayLoan">Repay Loan</button>
+            </div>
+        </div>
+        <div class="right">
+            <h4 class="banker_div_title">Laptops</h4>
+            <select name="computers" id="computers"></select>
+            <span id="computerSpecs"></span>
+        </div>
+
+    </div>
+</body>
+<script src="js/storeApp.js"></script>
+</html>

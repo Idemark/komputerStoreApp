@@ -1,0 +1,70 @@
+.title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.button_loan {
+    background-color: rgb(92, 204, 135);
+}
+
+.button_work {
+    background-color: rgb(34, 126, 247);
+}
+
+.button_bank {
+    background-color: rgb(225, 240, 93);
+}
+
+.buttonRepayLoan {
+    background-color: rgb(240, 103, 93);
+}
+
+.container {
+    width:100%;
+    text-align:center;
+}
+
+.left {
+    float:left;
+    width:200px;
+}
+
+.middle {
+    display: inline-block;
+    margin:0 auto;
+    width:200px;
+}
+
+.right {
+    float:right;
+    width:200px;
+}
+
+.banker_div_title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.banker_div_balance {
+    font-size: 20px;
+}
+
+.banker_div_button {
+
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+
+.floatLeft {
+    float:left;
+}
+
+.inLine {
+    display:contents;
+}
