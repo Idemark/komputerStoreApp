@@ -10,6 +10,10 @@ const repayButtonDisplayElement = document.getElementById("repayButtonDisplay");
 const repayButtonElement = document.getElementById("repay");
 const computersElement = document.getElementById("computers");
 const computerSpecsElement = document.getElementById("computerSpecs");
+const computerCostElement = document.getElementById("computerCost");
+const buyButtonElement = document.getElementById("buyButton");
+const computerDescription = document.getElementById("computerDescription");
+const computerImage = document.getElementById("computerImage");
 
 let pay = 0;
 let balance = 0;
@@ -57,12 +61,13 @@ const loan = () => {
 }
 
 const getALoan = (event) => {
-        let textInput = 0;
         if(event.key === 'Enter') {
-            textInput = loanInputElement.value;
+            let textInput = parseInt(loanInputElement.value);
             if(textInput <= (balance*2)){
                 remainingLoan = textInput;
                 loanElement.innerHTML = remainingLoan;
+                balance += textInput;
+                balanceElement.innerHTML = balance;
                 loanInputElement.className="hide";
                 repayButtonDisplayElement.className="show";
             }
@@ -96,6 +101,7 @@ const repayLoan = () => {
 }
 
 let computers= [];
+let computerPrice = 0;
 
 
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
@@ -119,6 +125,34 @@ const handleComputerStoreChange = e => {
     computerSpecsElement.innerText = selectedComputer.specs;
 }
 
+const displayComputerPrice = e => {
+    const selectedComputer = computers[e.target.selectedIndex]
+    computerCostElement.innerText = selectedComputer.price;
+    computerPrice = selectedComputer.price;
+}
+
+const showComputerDescription = e => {
+    const selectedComputer = computers[e.target.selectedIndex]
+    computerDescription.innerText = selectedComputer.description;
+}
+
+const showComputerImage = e => {
+    const selectedComputer = computers[e.target.selectedIndex]
+    computerImage.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedComputer.image;
+}
+
+const buyComputer = () => {
+    if(balance >= computerPrice) {
+        balance -= computerPrice;
+        balanceElement.innerHTML = balance;
+        alert("Successfully bought a computer");
+    }
+    else{
+        alert("The computer is to expensive");
+    }
+}
+
+
 
 workButtonElement.addEventListener("click", work);
 bankButtonElement.addEventListener("click",bank);
@@ -126,4 +160,7 @@ loanButtonElement.addEventListener("click",loan);
 loanInputElement.addEventListener("keypress",getALoan);
 repayButtonElement.addEventListener("click",repayLoan);
 computersElement.addEventListener("change",handleComputerStoreChange);
-
+computersElement.addEventListener("change", displayComputerPrice);
+computersElement.addEventListener("change", showComputerDescription);
+computersElement.addEventListener("change", showComputerImage);
+buyButtonElement.addEventListener("click",buyComputer);
