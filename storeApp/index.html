@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +8,77 @@
     <title>Komputer Store App</title>
     <link rel="stylesheet" href="css/storeApp.css">
 </head>
-<body>
-    <h2 class="title">Customer Store App</h2>
-    <div class="container">
-        <div class="left">
-            <h4 class="banker_div_title">Joe Banker</h4>
-            <div>
-                <h5 class="banker_div_balance inLine">Balance</h5>
-                <span class="inLine" id="balance">0</span>
-            </div>
-            <div>
-                <h5 id="loanTitle" class="loanTitle inLine">Outstanding Loan</h5>
-                <span id="loan" class="inLine"></span>
-            </div>
-            <input class="hide" type="text" id="loanInput" value=""/>
-            <button id="getALoan" class="button_loan" >Get a loan</button>
-        </div>
-        <div class="middle">
-            <h4 class="banker_div_title">Work</h4>
-            <div>
-                <h5 class="banker_div_balance inLine">Pay</h5>
-                <span class="inLine" id="pay">0</span>
-            </div>
-            <button id="bank" class="button_bank">Bank</button>
-            <button id="work" class="button_work">Work</button>
-            <div id="repayButtonDisplay" class="hide">
-                <button id="repay" class="buttonRepayLoan">Repay Loan</button>
-            </div>
-        </div>
-        <div class="right">
-            <h4 class="banker_div_title">Laptops</h4>
-            <select name="computers" id="computers"></select>
-            <span id="computerSpecs"></span>
-        </div>
 
-    </div>
-    <div class="container">
-        <div class="infoSection">
-            <div class="infoSectionLeft">
-                <img id="computerImage" class="imageSize"></img>
+<body>
+    <div class="wrapper">
+        <div class="topBanner">
+            <h5 class="bannerText">Komputer Store</h5>
+        </div>
+        <div class="container">
+            <div class="container2" id="left">
+                <h3 class="titles inLine">Joe Banker</h3>
+                <div>
+                    <span class="leftSide">Balance</span>
+                    <span class="rightSide" id="balance">0</span>
+                </div>
+                <div>
+                    <span id="loanTitle" class="leftSide hide">Outstanding Loan</span>
+                    <span id="loan" class="rightSide hide"></span>
+                </div>
+                <div>
+                    <input class="hide" type="text" id="loanInput" value="" />
+                </div>
+                <div>
+                    <button id="getALoan" class="buttonLoan">Get a loan</button>
+                </div>
             </div>
-            <div class="infoSectionMiddle">
-                <span id="computerDescription"></span>
+            <div class="container2" id="middle">
+                <h3 class="titles">Work</h3>
+                <div>
+                    <span class="leftSide">Pay</span>
+                    <span class="rightSide" id="pay">0</span>
+                </div>
+                <div>
+                    <button id="bank" class="buttonBank">Bank</button>
+                    <button id="work" class="buttonWork">Work</button>
+                    <div id="repayButtonDisplay" class="hide">
+                        <button id="repay" class="buttonRepay">Repay Loan</button>
+                    </div>
+                </div>
             </div>
-            <div class="infoSectionRight">
-                <span id="computerCost"></span>
-                <button id="buyButton" class="buyButton">Buy</button>
+            <div class="container2" id="right">
+                <h4 class="titles">Laptops</h4>
+                <select name="computers" id="computers" class="computerSelect"></select>
+                <ul id="computerSpecsList"></ul>
+                <span id="computerSpecs"></span>
             </div>
-            
+        </div>
+        <div class="container">
+            <div class="infoSection">
+                <div class="infoSectionLeft">
+                    <img id="computerImage" class="imageSize"></img>
+                </div>
+                <div class="infoSectionMiddle">
+                    <div class="textLeft">
+                        <h3 id="computerTitle"></h3>
+                    </div>
+                    <div class="textLeft">
+                        <span id="computerDescription"></span>
+                    </div>
+                </div>
+                <div class="infoSectionRight">
+                    <div class="computerCost">
+                        <span id="computerCost"></span>
+                    </div>
+                    <div>
+                        <button id="buyButton" class="buyButton">Buy</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
 <script src="js/storeApp.js"></script>
+
 </html>
