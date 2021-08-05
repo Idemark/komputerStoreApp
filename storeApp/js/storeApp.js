@@ -126,7 +126,7 @@ the loanTitle, loan element and repay-button is changed to hidden.
 const bank = () => {
     if (pay > 0) { // if no work is done. It skips updating balance.
         if (remainingLoan > 0) {
-            if (remainingLoan < (pay * 0.1)) {
+            if (remainingLoan <= (pay * 0.1)) {
                 updatePay(pay - remainingLoan);
                 updateOutstandingLoan(remainingLoan - remainingLoan);
             }
