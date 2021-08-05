@@ -46,6 +46,7 @@ const bank = () => {
             loanFlag = true;
             loanTitleElement.className = "leftSide hide";
             loanElement.className = "rightSide hide";
+            repayButtonDisplayElement.className = "hide";
         }
     }
 }
@@ -155,6 +156,7 @@ const createSpecsList = (specs) => {
 
 const addSpecsToList = (spec) => {
     const computerSpec = document.createElement("li");
+    computerSpec.className = "specFontSize";
     computerSpec.appendChild(document.createTextNode(spec));
     computerSpecsListElement.appendChild(computerSpec);
 }

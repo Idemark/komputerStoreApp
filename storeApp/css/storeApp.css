@@ -1,33 +1,28 @@
 .wrapper {
     margin: auto;
     width: 70%;
+    border: solid black 1px;
+}
 
-}
-.wrapper2 {
-    position: relative;
-}
-.topBanner {
+#topBanner {
     background-color: black;
     width: 100%;
     height: 50px;
-    margin-top: -20px;
 }
 
 .bannerText {
     color: white;
+    margin-left: 8%;
+    font-size: 15px;
 }
 
-.container {
+#container {
     width:100%;
     text-align:center;
     margin-top: 3%;
 }
 
-.textLeft {
-    text-align: left;
-}
-
-.container2 {
+.container {
     border-radius: 15px;
     width:25%;
     height: 250px;
@@ -70,17 +65,20 @@
 }
 
 .buttonLoan {
+    border-radius: 10px;
     width: 80%;
-    margin-top: 30%;
+    margin-top: 17%;
     margin-bottom: 5%;
     background-color: rgb(92, 204, 135);
 }
 .buttonBank {
+    border-radius: 10px;
     width: 80%;
-    margin-top: 30%;
+    margin-top: 20%;
     background-color: rgb(225, 240, 93);
 }
 .buttonWork {
+    border-radius: 10px;
     width: 80%;
     margin-top: 3%;
     background-color: rgb(34, 126, 247);
@@ -88,6 +86,7 @@
 }
 
 .buttonRepay {
+    border-radius: 10px;
     width: 80%;
     background-color: rgb(240, 103, 93);
     margin-bottom: 3%;
@@ -97,11 +96,10 @@
     width: 80%;
 }
 
-
 .infoSection {
-    border-radius: 15px;
+    border-radius: 10px;
     display: inline-block;
-    margin-top: 10%;
+    margin-top: 0%;
     border: 1px black solid;
     width:84%;
     background-color: rgb(241, 241, 241);
@@ -112,12 +110,10 @@
     width:20%;
 }
 
-.imageSize {
-    margin-top: 10%;
-    margin-left: 10%;
-    width: 100%;
+.specFontSize {
+    font-size: 12px;
+    text-align: left;
 }
-
 
 .infoSectionMiddle{
     display: inline-block;
@@ -130,19 +126,21 @@
     width:30%
 }
 
+.imageSize {
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 100%;
+}
+
 .computerCost {
     margin-top: 15%;
 }
 .buyButton {
+    border-radius: 10px;
     margin-top: 15%;
     margin-bottom: 20%;
     width: 50%;
     background-color: rgb(149, 188, 240);
-}
-
-.banker_div_title {
-    font-size: 20px;
-    font-weight: bold;
 }
 
 .titles {
@@ -165,4 +163,8 @@
 
 .inLine {
     content: "\A";
+}
+
+.textLeft {
+    text-align: left;
 }

@@ -11,12 +11,12 @@
 
 <body>
     <div class="wrapper">
-        <div class="topBanner">
-            <h5 class="bannerText">Komputer Store</h5>
+        <div id="topBanner">
+            <span class="bannerText">Komputer Store</span>
         </div>
-        <div class="container">
-            <div class="container2" id="left">
-                <h3 class="titles inLine">Joe Banker</h3>
+        <div id="container">
+            <div class="container" id="left">
+                <h3 class="titles inLine leftSide">Joe Banker</h3>
                 <div>
                     <span class="leftSide">Balance</span>
                     <span class="rightSide" id="balance">0</span>
@@ -32,8 +32,8 @@
                     <button id="getALoan" class="buttonLoan">Get a loan</button>
                 </div>
             </div>
-            <div class="container2" id="middle">
-                <h3 class="titles">Work</h3>
+            <div class="container" id="middle">
+                <h3 class="titles leftSide">Work</h3>
                 <div>
                     <span class="leftSide">Pay</span>
                     <span class="rightSide" id="pay">0</span>
@@ -46,14 +46,13 @@
                     </div>
                 </div>
             </div>
-            <div class="container2" id="right">
-                <h4 class="titles">Laptops</h4>
+            <div class="container" id="right">
+                <h4 class="titles leftSide">Laptops</h4>
                 <select name="computers" id="computers" class="computerSelect"></select>
                 <ul id="computerSpecsList"></ul>
-                <span id="computerSpecs"></span>
             </div>
         </div>
-        <div class="container">
+        <div id="container">
             <div class="infoSection">
                 <div class="infoSectionLeft">
                     <img id="computerImage" class="imageSize"></img>
