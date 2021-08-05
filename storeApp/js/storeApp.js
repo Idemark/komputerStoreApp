@@ -250,7 +250,7 @@ const buyComputer = () => {
 }
 
 const onErrorImg = () => {
-    computerImage.src="https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg";
+    computerImage.src = "https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg";
 }
 
 workButtonElement.addEventListener("click", work);
