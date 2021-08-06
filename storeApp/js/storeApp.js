@@ -131,9 +131,9 @@ const bank = () => {
                 updateOutstandingLoan(remainingLoan - remainingLoan);
             }
             else {
-                updatePay(pay * 0.9)
-                updateOutstandingLoan((pay * 0.1));
+                updateOutstandingLoan((remainingLoan - pay * 0.1));
                 balance += (pay * 0.9);
+                updatePay(pay * 0.9)
                 pay = 0;
             }
         }
@@ -145,6 +145,10 @@ const bank = () => {
             loanElement.className = "rightSide hide";
             repayButtonDisplayElement.className = "hide";
         }
+    }
+    else {
+        updateBalance(balance);
+        updatePay(0);
     }
 }
 
